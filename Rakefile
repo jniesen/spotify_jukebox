@@ -46,10 +46,7 @@ task :start do
 end
 APP_FILE = 'app/jukebox_web.rb'
 APP_CLASS = 'JukeboxWeb'
-require 'sinatra/assetpack/rake'
 
 require 'jasmine'
 load 'jasmine/tasks/jasmine.rake'
-task('jasmine:ci').enhance(['assetpack:build'])
-task('jasmine:server').enhance(['assetpack:build'])
 
