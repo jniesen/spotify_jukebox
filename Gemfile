@@ -19,4 +19,5 @@ group :test do
   gem 'autotest-growl'
   gem 'rspec'
   gem 'mocha'
+  gem 'jasmine'
 end

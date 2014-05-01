@@ -8,7 +8,7 @@ def autoload_all path
   Dir.glob("#{path}**/*.rb").each do |file|
     File.open(file, 'r') do |infile|
       while (line = infile.gets)
-        match = line.match /^(class|module)\s([A-Z]\w+)/
+        match = line.match(/^(class|module)\s([A-Z]\w+)/)
         if not match.nil? and not match[2].nil?
           autoload match[2].to_sym, File.expand_path(file)
           break
@@ -44,6 +44,8 @@ task :start do
   end
   JukeboxWeb.run!({ :server => 'thin', :custom => { :spotify_wrapper => spotify_wrapper, :message_queue => message_queue }})
 end
+require 'jasmine'
+load 'jasmine/tasks/jasmine.rake'
 
 APP_FILE = 'app/jukebox_web.rb'
 APP_CLASS = 'JukeboxWeb'
