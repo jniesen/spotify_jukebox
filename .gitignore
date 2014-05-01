@@ -14,3 +14,6 @@ nohup.out
 .DS_Store
 coverage
 /spotify_appkey.key
+/public/assets/
+/public/css/
+/public/js/

@@ -44,3 +44,7 @@ task :start do
   end
   JukeboxWeb.run!({ :server => 'thin', :custom => { :spotify_wrapper => spotify_wrapper, :message_queue => message_queue }})
 end
+
+APP_FILE = 'app/jukebox_web.rb'
+APP_CLASS = 'JukeboxWeb'
+require 'sinatra/assetpack/rake'

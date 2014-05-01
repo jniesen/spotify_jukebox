@@ -12,6 +12,7 @@ class JukeboxWeb < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :bind, '0.0.0.0'
   set :sockets, []
+  set :custom, {}
 
   assets do
     js :application, ['/js/*.js']
